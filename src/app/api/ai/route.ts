@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || "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";
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY!;
 
 // Enhanced RAG: Fetch real-time context from multiple authoritative sources
 async function fetchRAGContext(query: string): Promise<{ context: string; sources: string[]; factCount: number }> {
